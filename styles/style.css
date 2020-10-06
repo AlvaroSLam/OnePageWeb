@@ -13,6 +13,7 @@ html{
     color: #555;
 }
 
+ul,
 nav {
     list-style: none;
 }
@@ -20,18 +21,49 @@ nav {
 a {
     text-decoration: none;
     opacity: 0.75;
+    color: #253145;
 }
 
 a:hover {
     opacity: 1;
 }
 
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #ededed;
+    border: 0; 
+    margin-bottom: 50px;
+}
+
+.section1-title{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /*----Buttons----*/
 a.btn {
-    border: 1px solid black;
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: center;
+    background-color: cadetblue;
+    opacity: 1;
 }
 
 /*--------------Header Styling--------*/
@@ -39,6 +71,10 @@ a.btn {
 /* Header will use flexbox */
 
 header {
+    /* Para que el nav bar no esté en medio*/
+    position: absolute;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,4 +102,57 @@ header nav {
 
 header nav li {
     margin: 0 15px;
+}
+
+
+/*--------------Front Page Styling--------*/
+/*----------------------------------------*/
+
+.frontPage {
+    position: relative;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.frontPage .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.frontPage h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.frontPage h3 {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.frontPage a.btn {
+    padding: 20px 45px
+}
+
+.frontPage-content-area{
+    /*We will create a nice transition*/
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
 }
