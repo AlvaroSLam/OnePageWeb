@@ -68,6 +68,7 @@ hr {
     justify-content: center;
 }
 
+
 /*----Buttons----*/
 a.btn {
     border-radius: 4px;
@@ -76,6 +77,14 @@ a.btn {
     text-align: center;
     background-color: cadetblue;
     opacity: 1;
+}
+
+/*----Media Queries----*/
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
 }
 
 /*--------------Header Styling--------*/
@@ -114,6 +123,20 @@ header nav {
 
 header nav li {
     margin: 0 15px;
+}
+
+/*----Media Queries Header----*/
+
+
+@media (max-width: 800px) {
+    section {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -169,6 +192,26 @@ header nav li {
     }
 }
 
+/*----Media Queries---*/
+
+@media (max-width: 800px) {
+    .frontPage {
+        min-height: 600px;
+    }
+
+    .frontPage h1 {
+        font-size: 48px;
+    }
+
+    .frontPage h3 {
+        font-size: 24px;
+    }
+
+    .frontPage a.btn {
+        padding: 15px 40px;
+    }
+}
+
 /*--------------Section 1 Styling--------*/
 /*----------------------------------------*/
 
@@ -186,6 +229,22 @@ header nav li {
 
 .section1 .grid li.large{
     flex-basis: 70%;
+}
+
+/*----media queries---*/
+
+@media (max-width: 1100px) {
+    .section1 .grid li.small,
+    .section1 .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .section1 .grid li.small,
+    .section1 .grid li.large {
+        flex-basis: 100%;
+    }
 }
 
 /*--------------Section 2 Styling--------*/
@@ -210,6 +269,15 @@ header nav li {
     margin: 25px 0;
 }
 
+/*----media queries---*/
+
+@media (max-width: 800px) {
+    .section2 .grid li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
 /*--------------Section 3 Styling--------*/
 /*----------------------------------------*/
 
@@ -223,6 +291,19 @@ header nav li {
 .section3 .author {
     font-weight: 700;
     font-size: 22px;
+}
+
+/*----media queries---*/
+
+@media (max-width: 800px) {
+    .section3 .quote {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .section3 .author {
+        font-size: 14px;
+    }
 }
 
 /*--------------Section 4 Styling--------*/
@@ -250,6 +331,15 @@ header nav li {
     font-size: 18px;
     color: #555;
     flex: 1;
+}
+
+/*----media queries---*/
+
+@media (max-width: 1000px) {
+    .section4 form input {
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+    }
 }
 
 /*--------------Footer--------------------*/
@@ -281,4 +371,20 @@ footer p {
 
 footer a {
     color: #fff;
+}
+
+/*----media queries---*/
+
+@media (max-width: 1100px) {
+    footer {
+        flex-direction: column;
+    }
+    footer p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer ul li {
+        margin: 0 8px;
+    }
 }
